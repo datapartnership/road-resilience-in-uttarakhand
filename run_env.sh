@@ -12,5 +12,5 @@ docker run -p 8888:8888 \
     --env MAPBOX_TOKEN=$MAPBOX_TOKEN \
     --env PYTHONPATH=/home/jovyan/work/src \
     --rm \
-    mrmaksimize/hospital-access-env:latest start-notebook.sh 
+    mrmaksimize/wb_road_flooding:latest start-notebook.sh 
 

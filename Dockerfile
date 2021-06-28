@@ -123,6 +123,7 @@ RUN pip install 'affine==2.3.0' \
     'PyYAML==5.3.1' \
     'pyzmq==19.0.2' \
     'rasterio==1.1.5' \
+    'richdem' \
     'requests==2.24.0' \
     'rise==5.6.1' \
     'Rtree==0.9.4' \
