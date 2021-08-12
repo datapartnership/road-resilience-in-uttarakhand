@@ -1,7 +1,12 @@
 .env
 .ipynb_checkpoints
-.HDF5
-.nc4
+*.HDF5
+*.nc4
+*.tif
+*.csv
+*.gpkg
+*.shp
+*.zip
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
