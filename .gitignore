@@ -1,6 +1,6 @@
 .env
 .ipynb_checkpoints
-*.HDF5
+*.HDF5*
 *.nc4
 *.tif
 *.csv
