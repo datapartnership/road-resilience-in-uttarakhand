@@ -4,9 +4,17 @@
 *.nc4
 *.tif
 *.csv
-*.gpkg
+*.gpkg*
 *.shp
 *.zip
+*.xlsx
+*.gz
+*.cpg
+*.geojson
+*.dbf
+*.prg
+*.qmz
+*.shx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
