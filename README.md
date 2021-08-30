@@ -1,18 +1,15 @@
-# Hospital Accessibility Analysis
+# Road Resilience Analysis - Predicting Precipitation-Induced Road Closures in Uttarakhand
 
-A full article and description is published on the [UN World Data Forum Blog](https://unstats.un.org/unsd/undataforum/blog/planning-for-equitable-access-to-health-infrastructure/).
+In Uttarakhand, irregular rainfall patterns and mountainous terrain make roads susceptible to precipitation-induced closures by flooding or slope failure. These road closures have a significant impact on the livelihood of individuals in Uttarakhand’s rural communities, who rely on roads to access basic amenities.
 
-Indonesia and the Philippines are archipelagos, where geographic and administrative boundaries are similar. The collection of islands is home to different concentrations of ethnic, cultural, linguistic, and socioeconomic groups, with an imbalanced distribution of health facilities and physicians.  
+With the availability of granular micro-weather data, we can build upon previous methods to develop a dynamic model that predicts real-time and forecasted road closures. With this model, local transportation authorities can engage in proactive emergency planning for predicted road closures, such as rerouting traffic or sending early-warning alerts to villagers. 
 
-Through conversations with experts on the ground, we understood that health facility records are largely incomplete and on paper. By using a combination of public and private sector data, we aimed for a more comprehensive understanding of health facility accessibility.  
+The analysis will be performed through the following steps (from left to right on the diagram):
 
-To measure health accessibility, we focus on travel times to the nearest health facility.  By using time as our comparison metric, we take into account key barriers like the quality of roads and the amount of traffic. In our analysis, we aim to understand what parts of a region/province are beyond the threshold for acceptable travel time.  
-
-To test our framework in various settings, we use national health and demographic survey data to focus on regions with high health indicators and a region with low health indicators in both countries. For Indonesia, we chose East Java (high health indicators) and Papua (low health indicators). For Philippines, we focus on National Capital Region or NCR (high health indicators) and Bangsamoro Autonomous Muslim Mindanao or BARMM (low health indicators).  
-
-![](https://github.com/datapartnership/hospital-accessibility/raw/master/reports/vis/idn_drv.png)
-
-![](https://github.com/datapartnership/hospital-accessibility/raw/master/reports/vis/phl_drv.png)
+1.  Gather and clean three types of variables that could impact road closures: topography, road characteristics, and weather.
+2.  Run a logistic regression model to analyze the impact of these variables on road closures.
+3.  Perform a population density buffer analysis to assess road criticality.
+4.  Combining weather forecasting with assessed road criticality, create a road closure risk report for the following week.
 
 ## Table of contents
 - [Project Title](#project-title)
@@ -27,7 +24,7 @@ To test our framework in various settings, we use national health and demographi
 ### Basics
 Clone the code to your machine using the standard Git clone command. If you have SSH keys setup the command is:
 ```
-git clone git@github.com:datapartnership/hospital-accessibility.git
+git clone git@github.com:datapartnership/road_flooding.git
 ```
 
 ### Docker
@@ -37,13 +34,6 @@ You will need to have Docker and docker-compose installed on your system to run 
 * For Mac: https://store.docker.com/editions/community/docker-ce-desktop-mac
 * For Windows: https://store.docker.com/editions/community/docker-ce-desktop-windows
 * For Linux: Go to this page and choose the appropriate install for your Linux distro: https://www.docker.com/community-edition
-
-### Mapbox Token
-* Head over to [Mapbox](https://mapbox.com) and grab your token.  
-* Copy the `.env.example` file to `.env`
-* In the `.env` file, insert the Mapbox Token in line 3
-
-> Note: This project was supported by the [Development Data Partnership](https://datapartnership.org), through which we received a donation from Mapbox to use its services.
 
 ## Usage
 [(Back to top)](#table-of-contents)
@@ -80,8 +70,8 @@ All of the modules are installed inside the docker container, and that is where 
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+│                    and a short `-` delimited description, e.g.
+│                         `01-initial-data-exploration`.
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
@@ -104,6 +94,8 @@ If you have questions or want to improve the code, please submit an issue.
 If this was useful, please let us know by submitting an issue as well!
 
 ## Acknowledgments
+
+Project team: Emily Fang (emfang@mit.edu), Maksim Pecherskiy, Holly Krambeck
 
 This project was supported by [Development Data Partnership](https://datapartnership.org).
 
