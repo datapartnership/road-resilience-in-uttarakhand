@@ -11,6 +11,8 @@ The analysis will be performed through the following steps (from left to right o
 3.  Perform a population density buffer analysis to assess road criticality.
 4.  Combining weather forecasting with assessed road criticality, create a road closure risk report for the following week.
 
+Full writeup can be found (here).
+
 ## Table of contents
 - [Project Title](#project-title)
 - [Table of contents](#table-of-contents)
@@ -54,6 +56,10 @@ After you started the Docker container, your development environment will look l
 *Credit: [Manifold AI](https://github.com/manifoldai/orbyter-cookiecutter)*
 
 All of the modules are installed inside the docker container, and that is where code execution happens.  However, you're able to edit your files locally, just like you would with any other project.
+
+## How to Use
+
+Detailed instructions can be found (here) in (section xxx), 
 
 ## Repo Structure
 
