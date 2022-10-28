@@ -1,0 +1,27 @@
+# Book settings
+title:
+author: Development Data Partnership
+logo: docs/images/logo.png
+exclude_patterns: [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
+
+repository:
+    url: https://github.com/datapartnership/road-resilience-in-uttarakhand
+    branch: main
+
+#######################################################################################
+# Execution settings
+execute:
+    execute_notebooks: force
+    allow_errors: true
+    exclude_patterns:
+        - notebooks/*.ipynb
+
+html:
+    home_page_in_navbar: false
+    extra_navbar: ""
+    use_edit_page_button: true
+    use_repository_button: true
+    use_issues_button: true
+    baseurl: https://datapartnership.github.io/road-resilience-in-uttarakhand
+
+only_build_toc_files: true

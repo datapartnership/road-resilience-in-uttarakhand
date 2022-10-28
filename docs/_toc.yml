@@ -1,0 +1,11 @@
+format: jb-book
+root: README
+
+parts:
+  - caption: Methodology
+    numbered: True
+    chapters:
+      - file: notebooks/00-get-network.ipynb
+      - file: notebooks/01-geotagging.ipynb
+      - file: notebooks/02-weather.ipynb
+      - file: notebooks/03-regression.ipynb
